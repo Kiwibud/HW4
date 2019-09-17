@@ -3,8 +3,7 @@ def hottest(cities, n=4) -> list:
 
 
 def common_words(str1, str2):
-    words = set(str1.lower().split()) & set(str2.lower().split())
-    return len(words)
+    return len(set(str1.lower().split()) & set(str2.lower().split()))
 
 
 def alert(students) -> set:
