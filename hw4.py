@@ -4,8 +4,6 @@
 # Author: Kiwibud
 # ---------------------------------------------------------------------
 
-import string
-
 
 def hottest(cities, num=4):
     return sorted(cities, key=cities.get, reverse=True)[0:num]
@@ -13,8 +11,8 @@ def hottest(cities, num=4):
 
 def common_words(str1, str2):
     # import string
-    str1_set = set(str1.lower().strip(string.punctuation).split())
-    str2_set = set(str2.lower().strip(string.punctuation).split())
+    str1_set = set(str1.lower().split())
+    str2_set = set(str2.lower().split())
     return len(str1_set & str2_set)
 
 
@@ -25,7 +23,7 @@ def alert(grades):
 
 def make_password(sentence):
     return ''.join(word[0] for word
-                   in sentence.upper().strip(string.punctuation).split())
+                   in sentence.upper().split())
 
 
 def extra_credit(grades, extra_points=1):
